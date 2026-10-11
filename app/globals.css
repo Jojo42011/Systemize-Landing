@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/*
+  Aethon Intelligence brand tokens.
+  Warm off-white canvas, near-black ink, saffron accent, Inter throughout.
+  Headlines are straight bold sans, matching the reference funnel's clean look.
+*/
+@theme {
+  --color-canvas: #fbf8f1;
+  --color-canvas-tint: #f4efe1;
+  --color-canvas-deep: #16130e;
+  --color-ink: #17140f;
+  --color-ink-2: #433b2d;
+  --color-muted: #6e6757;
+  --color-faint: #938b74;
+  --color-saffron: #c77300;
+  --color-gold: #f5b301;
+  --color-gold-soft: #fbe7a2;
+  --color-line: rgba(25, 21, 16, 0.14);
+  --color-line-soft: rgba(25, 21, 16, 0.07);
+  --color-cream: #e9e1d0;
+
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold-soft);
+  color: var(--color-ink);
+}
+
+/* Visible focus for keyboard users, quiet for pointer users */
+:focus-visible {
+  outline: 2px solid var(--color-saffron);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Display headings: straight, bold, tight sans */
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* FAQ accordion: rotate marker, hide default disclosure triangle */
+details.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item > summary .faq-icon {
+  transition: transform 0.25s ease;
+}
+details.faq-item[open] > summary .faq-icon {
+  transform: rotate(45deg);
+}
