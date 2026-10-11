@@ -12,13 +12,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: "AI Lead Response Systems for Real Estate Operators | Aethon Intelligence",
+  title: "Stop Forcing Bad Marketing. We will install a social media growth system that will get you 20–30 booked appointments in 30 days so you never have to worry where the next appointment will come from.",
   description:
-    "Aethon Intelligence installs custom AI lead response and follow up systems around your existing ads, CRM, and sales process, so the leads you already generate become booked conversations. Built for Texas brokerages and real estate operators.",
+    "We will install a social media growth system that will get you 20–30 booked appointments in 30 days so you never have to worry where the next appointment will come from.",
   openGraph: {
-    title: "Turn the Leads You Already Generate Into Booked Conversations",
+    title: "Stop Forcing Bad Marketing. We will install a social media growth system that will get you 20–30 booked appointments in 30 days so you never have to worry where the next appointment will come from.",
     description:
-      "Every new inquiry gets a fast response, consistent follow up, real qualification, and a clear next step. Without spending more on ads, buying more leads, or chasing more referrals.",
+      "We will install a social media growth system that will get you 20–30 booked appointments in 30 days so you never have to worry where the next appointment will come from.",
     url: site.url,
     siteName: site.name,
     locale: "en_US",

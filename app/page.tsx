@@ -18,15 +18,15 @@ export default function Home() {
             id="hero-heading"
             className="font-display mx-auto max-w-3xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14] lg:text-5xl"
           >
-            We Install a Custom AI Lead Response System That Turns the Leads
-            You Already Pay For Into{" "}
-            <span className="text-accent">Booked Conversations</span>
+            Stop Forcing <span className="text-accent">Bad Marketing.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
-            Every new inquiry gets a fast response, consistent follow up, real
-            qualification, and a clear next step. Without spending more on ads,
-            buying more leads, or chasing more referrals.
+            We will install a{" "}
+            <strong className="font-bold text-accent">social media growth system</strong>{" "}
+            that will get you{" "}
+            <strong className="font-bold text-accent">20–30 booked appointments in 30 days</strong>{" "}
+            so you never have to worry where the next appointment will come from.
           </p>
 
           <div className="mx-auto mt-10 max-w-3xl">
