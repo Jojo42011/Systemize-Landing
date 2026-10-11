@@ -23,7 +23,7 @@ export default function Home() {
               We will install a{" "}
               <strong className="font-bold text-accent">custom social media growth system</strong>{" "}
               that will get you{" "}
-              <strong className="font-bold text-accent">20–30 booked appointments in 30 days.</strong>
+              <strong className="font-bold text-accent">20–30 booked appointments in just 30 days.</strong>
             </span>
           </h1>
 
