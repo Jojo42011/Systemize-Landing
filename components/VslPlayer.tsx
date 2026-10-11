@@ -49,7 +49,7 @@ export default function VslPlayer({
   }, [configured, video.loaderUrl, containerId]);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl border border-line bg-canvas-deep shadow-[0_24px_60px_-24px_rgba(23,20,15,0.4)]">
+    <div className="relative w-full overflow-hidden rounded-2xl border border-contour-dark bg-canvas-deep shadow-[0_24px_60px_-24px_rgba(11,17,27,0.4)]">
       <div className="relative aspect-video w-full">
         {configured ? (
           <div id={containerId} className="absolute inset-0 h-full w-full" />
@@ -70,7 +70,7 @@ function VslPoster({
   text: string;
 }) {
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-[radial-gradient(ellipse_at_center,#28221a_0%,#16130e_70%)] px-6 text-center">
+    <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-[radial-gradient(ellipse_at_center,#1C2433_0%,#0B111B_70%)] px-6 text-center">
       <Image
         src="/aethon-logo.svg"
         alt=""
@@ -80,20 +80,20 @@ function VslPoster({
       />
       <div
         aria-hidden="true"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-cream/25 bg-cream/10"
+        className="flex h-16 w-16 items-center justify-center rounded-full border border-accent bg-accent"
       >
         <svg
           width="22"
           height="22"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="ml-1 text-cream"
+          className="ml-1 text-on-accent"
         >
           <path d="M8 5.14v13.72c0 .8.87 1.3 1.56.88l10.5-6.86a1.03 1.03 0 0 0 0-1.76L9.56 4.26A1.03 1.03 0 0 0 8 5.14Z" />
         </svg>
       </div>
-      <p className="font-display text-lg text-cream sm:text-xl">{title}</p>
-      <p className="max-w-sm text-sm text-cream/60">{text}</p>
+      <p className="font-display text-lg text-on-dark sm:text-xl">{title}</p>
+      <p className="max-w-sm text-sm text-on-dark">{text}</p>
     </div>
   );
 }

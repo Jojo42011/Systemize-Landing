@@ -28,7 +28,7 @@ export default function ProofSection({ id }: { id?: string }) {
       aria-labelledby="proof-heading"
       className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-8 sm:py-24"
     >
-      <p className="text-center text-sm font-bold uppercase tracking-[0.16em] text-saffron">
+      <p className="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">
         Documented work
       </p>
       <h2
@@ -39,17 +39,17 @@ export default function ProofSection({ id }: { id?: string }) {
       </h2>
 
       {/* Lead Smart */}
-      <article className="mt-12 overflow-hidden rounded-2xl border border-line bg-white shadow-[0_10px_40px_-20px_rgba(23,20,15,0.15)]">
+      <article className="mt-12 overflow-hidden rounded-2xl border border-line bg-card shadow-[0_10px_40px_-20px_rgba(11,17,27,0.15)]">
         <div className="flex flex-col gap-5 border-b border-line-soft px-7 py-7 sm:flex-row sm:items-center sm:gap-8 sm:px-10">
           <Image
             src="/leadsmart.png"
             alt="Lead Smart logo"
             width={147}
             height={90}
-            className="h-16 w-auto shrink-0 sm:h-20"
+            className="h-16 w-auto shrink-0 grayscale sm:h-20"
           />
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-caption">
               Case study: Lead Smart · Pay per call performance marketing
             </p>
             <h3 className="font-display mt-2 text-2xl leading-snug sm:text-3xl">
@@ -60,8 +60,8 @@ export default function ProofSection({ id }: { id?: string }) {
         </div>
         <div className="grid gap-px bg-line-soft sm:grid-cols-2 lg:grid-cols-4">
           {leadSmartStats.map((stat) => (
-            <div key={stat.label} className="bg-white px-7 py-8">
-              <p className="font-display text-3xl text-saffron sm:text-[2rem]">
+            <div key={stat.label} className="bg-card px-7 py-8">
+              <p className="font-display text-3xl text-accent sm:text-[2rem]">
                 {stat.value}
               </p>
               <p className="mt-2.5 text-base leading-snug text-ink-2">
@@ -76,7 +76,7 @@ export default function ProofSection({ id }: { id?: string }) {
             buyer reconciliation, dispute automation, and an internal AI
             assistant. Designed, built, and deployed in roughly six weeks.
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">
+          <p className="mt-3 text-sm leading-relaxed text-caption">
             Shown to demonstrate how Aethon builds and operates complex
             business systems tied to measurable outcomes. This engagement was
             for a performance marketing company. It is not a real estate lead
@@ -86,17 +86,17 @@ export default function ProofSection({ id }: { id?: string }) {
       </article>
 
       {/* Aquatic Pools */}
-      <article className="mt-8 overflow-hidden rounded-2xl border border-line bg-white shadow-[0_10px_40px_-20px_rgba(23,20,15,0.15)]">
+      <article className="mt-8 overflow-hidden rounded-2xl border border-line bg-card shadow-[0_10px_40px_-20px_rgba(11,17,27,0.15)]">
         <div className="flex flex-col gap-5 border-b border-line-soft px-7 py-7 sm:flex-row sm:items-center sm:gap-8 sm:px-10">
           <Image
             src="/aquatic-pools.png"
             alt="Aquatic Pools logo"
             width={194}
             height={51}
-            className="h-10 w-auto shrink-0 sm:h-12"
+            className="h-10 w-auto shrink-0 grayscale sm:h-12"
           />
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-muted">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-caption">
               Case study: Aquatic Pools · Custom pool builder in Arizona
             </p>
             <h3 className="font-display mt-2 text-2xl leading-snug sm:text-3xl">
@@ -106,8 +106,8 @@ export default function ProofSection({ id }: { id?: string }) {
         </div>
         <div className="grid gap-px bg-line-soft sm:grid-cols-2 lg:grid-cols-4">
           {aquaticStats.map((stat) => (
-            <div key={stat.label} className="bg-white px-7 py-8">
-              <p className="font-display text-3xl text-saffron sm:text-[2rem]">
+            <div key={stat.label} className="bg-card px-7 py-8">
+              <p className="font-display text-3xl text-accent sm:text-[2rem]">
                 {stat.value}
               </p>
               <p className="mt-2.5 text-base leading-snug text-ink-2">
@@ -130,7 +130,7 @@ export default function ProofSection({ id }: { id?: string }) {
         Full write ups, with the numbers in context:{" "}
         <a
           href={site.caseStudies}
-          className="font-semibold text-saffron underline-offset-4 hover:underline"
+          className="font-semibold text-accent underline-offset-4 hover:underline"
         >
           aethonintelligence.com/case-studies
         </a>

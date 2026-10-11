@@ -84,7 +84,7 @@ export default function CalBooking() {
       config: { layout: "month_view" },
     });
     ns("ui", {
-      styles: { branding: { brandColor: "#c77300" } },
+      styles: { branding: { brandColor: "#131DA6" } },
       hideEventTypeDetails: false,
     });
     if (booking.redirectUrl) {
@@ -104,7 +104,7 @@ export default function CalBooking() {
   return (
     <div
       ref={containerRef}
-      className="min-h-[560px] w-full overflow-hidden rounded-2xl border border-line bg-white"
+      className="min-h-[560px] w-full overflow-hidden rounded-2xl border border-line bg-card"
       aria-label="Booking calendar"
     />
   );
@@ -112,16 +112,16 @@ export default function CalBooking() {
 
 function BookingFallback({ failed }: { failed: boolean }) {
   return (
-    <div className="flex min-h-[280px] w-full flex-col items-center justify-center gap-5 rounded-2xl border border-line bg-white px-6 py-12 text-center">
+    <div className="flex min-h-[280px] w-full flex-col items-center justify-center gap-5 rounded-2xl border border-line bg-card px-6 py-12 text-center">
       <p className="font-display text-2xl">Prefer to reach out directly?</p>
-      <p className="max-w-md text-sm leading-relaxed text-muted">
+      <p className="max-w-md text-sm leading-relaxed text-caption">
         {failed
           ? "The calendar could not load just now. You can reach us directly and we will set the walkthrough up by hand."
           : "Tell us about your operation and we will set up your walkthrough directly."}
       </p>
       <a
         href={booking.fallbackHref}
-        className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-[#2b261d]"
+        className="inline-flex items-center justify-center rounded-full bg-canvas-deep px-7 py-3 text-sm font-semibold text-on-dark transition-colors hover:bg-accent hover:text-on-accent"
       >
         Contact Aethon Intelligence
       </a>

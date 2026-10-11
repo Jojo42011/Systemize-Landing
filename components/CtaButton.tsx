@@ -4,7 +4,7 @@ type CtaButtonProps = {
   children: React.ReactNode;
   href?: string;
   size?: "md" | "lg";
-  variant?: "gold" | "ink";
+  variant?: "accent" | "ink";
   className?: string;
 };
 
@@ -16,7 +16,7 @@ export default function CtaButton({
   children,
   href = bookingHref,
   size = "lg",
-  variant = "gold",
+  variant = "accent",
   className = "",
 }: CtaButtonProps) {
   const sizeClasses =
@@ -24,9 +24,9 @@ export default function CtaButton({
       ? "px-8 py-4 text-base sm:px-10 sm:text-lg"
       : "px-5 py-2.5 text-sm";
   const variantClasses =
-    variant === "gold"
-      ? "bg-gold text-ink hover:bg-[#e6a800] shadow-[0_6px_24px_-6px_rgba(199,115,0,0.45)]"
-      : "bg-ink text-canvas hover:bg-[#2b261d]";
+    variant === "accent"
+      ? "bg-accent text-on-accent hover:bg-canvas-deep hover:text-on-dark shadow-[0_6px_24px_-6px_rgba(19,29,166,0.35)]"
+      : "bg-canvas-deep text-on-dark hover:bg-accent hover:text-on-accent";
 
   return (
     <a

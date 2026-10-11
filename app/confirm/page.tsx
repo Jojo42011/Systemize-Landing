@@ -30,7 +30,7 @@ export default function ConfirmPage() {
           aria-labelledby="confirm-heading"
           className="mx-auto w-full max-w-4xl px-5 pt-16 text-center sm:px-8 sm:pt-24"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-saffron">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
             You are booked
           </p>
           <h1
@@ -38,7 +38,7 @@ export default function ConfirmPage() {
             className="font-display mx-auto mt-4 max-w-3xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14]"
           >
             Congratulations, Your Walkthrough Call Is{" "}
-            <span className="text-saffron">Scheduled</span>
+            <span className="text-accent">Scheduled</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
             Before the call, do two things: watch the short video below, and
@@ -73,7 +73,7 @@ export default function ConfirmPage() {
 
           <ol className="mt-10 grid gap-6 md:grid-cols-3">
             {/* Step 1: check email */}
-            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-white p-7">
+            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-card p-7">
               <StepBadge n={1} />
               <h3 className="mt-3 text-xl font-bold">Check your email</h3>
               <p className="mt-2 text-base leading-relaxed text-ink-2">
@@ -86,7 +86,7 @@ export default function ConfirmPage() {
             </li>
 
             {/* Step 2: open the invitation */}
-            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-white p-7">
+            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-card p-7">
               <StepBadge n={2} />
               <h3 className="mt-3 text-xl font-bold">
                 Open the calendar invitation
@@ -101,7 +101,7 @@ export default function ConfirmPage() {
             </li>
 
             {/* Step 3: click yes */}
-            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-white p-7">
+            <li className="flex min-w-0 flex-col rounded-2xl border border-line bg-card p-7">
               <StepBadge n={3} />
               <h3 className="mt-3 text-xl font-bold">
                 Click &ldquo;Yes&rdquo; to confirm
@@ -138,7 +138,7 @@ export default function ConfirmPage() {
               {prepItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 rounded-xl border border-line bg-white px-5 py-4 text-base leading-relaxed text-ink-2"
+                  className="flex items-start gap-3 rounded-xl border border-line bg-card px-5 py-4 text-base leading-relaxed text-ink-2"
                 >
                   <svg
                     aria-hidden="true"
@@ -150,7 +150,7 @@ export default function ConfirmPage() {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="mt-1 shrink-0 text-saffron"
+                    className="mt-1 shrink-0 text-accent"
                   >
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
@@ -184,7 +184,7 @@ export default function ConfirmPage() {
               If anything else comes up before the call,{" "}
               <a
                 href={routes.contact}
-                className="font-semibold text-saffron underline-offset-4 hover:underline"
+                className="font-semibold text-accent underline-offset-4 hover:underline"
               >
                 reach out to us directly
               </a>
@@ -207,7 +207,7 @@ function StepBadge({ n }: { n: number }) {
   return (
     <span
       aria-hidden="true"
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold text-base font-bold text-ink"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-card text-base font-bold text-caption"
     >
       {n}
     </span>
@@ -221,15 +221,15 @@ function EmailVisual() {
       aria-hidden="true"
       className="rounded-xl border border-line bg-canvas p-3"
     >
-      <div className="rounded-lg border border-line bg-white p-3 shadow-sm">
+      <div className="rounded-lg border border-line bg-card p-3 shadow-sm">
         <div className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold-soft">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-soft">
             <svg
               width="15"
               height="15"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#7a5200"
+              stroke="#131DA6"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -242,14 +242,14 @@ function EmailVisual() {
             <p className="truncate text-[13px] font-bold text-ink">
               Booking confirmed: Walkthrough Call
             </p>
-            <p className="truncate text-xs text-muted">
+            <p className="truncate text-xs text-caption">
               Aethon Intelligence · just now
             </p>
           </div>
-          <span className="ml-auto h-2 w-2 shrink-0 rounded-full bg-saffron" />
+          <span className="ml-auto h-2 w-2 shrink-0 rounded-full bg-accent" />
         </div>
       </div>
-      <div className="mt-2 rounded-lg border border-line-soft bg-white/60 p-3">
+      <div className="mt-2 rounded-lg border border-line-soft bg-card/60 p-3">
         <div className="h-2 w-3/4 rounded bg-line-soft" />
         <div className="mt-2 h-2 w-1/2 rounded bg-line-soft" />
       </div>
@@ -264,10 +264,10 @@ function InviteVisual() {
       aria-hidden="true"
       className="rounded-xl border border-line bg-canvas p-3"
     >
-      <div className="rounded-lg border border-line bg-white p-3 shadow-sm">
+      <div className="rounded-lg border border-line bg-card p-3 shadow-sm">
         <div className="flex items-center gap-3">
           <div className="w-12 shrink-0 overflow-hidden rounded-lg border border-line text-center">
-            <div className="bg-ink py-0.5 text-[9px] font-bold uppercase tracking-wide text-canvas">
+            <div className="bg-canvas-deep py-0.5 text-[9px] font-bold uppercase tracking-wide text-on-dark">
               Your
             </div>
             <div className="py-1 text-sm font-bold text-ink">Date</div>
@@ -276,16 +276,16 @@ function InviteVisual() {
             <p className="truncate text-[13px] font-bold text-ink">
               Walkthrough Call
             </p>
-            <p className="truncate text-xs text-muted">
+            <p className="truncate text-xs text-caption">
               Your selected time · 30 min
             </p>
-            <p className="truncate text-xs text-muted">
+            <p className="truncate text-xs text-caption">
               You + Aethon Intelligence
             </p>
           </div>
         </div>
       </div>
-      <p className="mt-2 text-center text-xs font-semibold text-muted">
+      <p className="mt-2 text-center text-xs font-semibold text-caption">
         The invitation is attached to the email
       </p>
     </div>
@@ -299,10 +299,10 @@ function RsvpVisual() {
       aria-hidden="true"
       className="rounded-xl border border-line bg-canvas p-3"
     >
-      <div className="rounded-lg border border-line bg-white p-3 shadow-sm">
-        <p className="text-xs font-semibold text-muted">Going?</p>
+      <div className="rounded-lg border border-line bg-card p-3 shadow-sm">
+        <p className="text-xs font-semibold text-caption">Going?</p>
         <div className="mt-2 flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-3.5 py-1.5 text-[13px] font-bold text-ink ring-2 ring-saffron/40">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3.5 py-1.5 text-[13px] font-bold text-on-accent ring-2 ring-accent/40">
             <svg
               width="13"
               height="13"
@@ -325,7 +325,7 @@ function RsvpVisual() {
           </span>
         </div>
       </div>
-      <p className="mt-2 text-center text-xs font-semibold text-muted">
+      <p className="mt-2 text-center text-xs font-semibold text-caption">
         Click Yes and you are locked in
       </p>
     </div>

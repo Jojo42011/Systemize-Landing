@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
-/*
-  Aethon Intelligence brand tokens.
-  Warm off-white canvas, near-black ink, saffron accent, Inter throughout.
-  Headlines are straight bold sans, matching the reference funnel's clean look.
-*/
+/* Shared cobalt and cool-neutral palette. */
 @theme {
-  --color-canvas: #fbf8f1;
-  --color-canvas-tint: #f4efe1;
-  --color-canvas-deep: #16130e;
-  --color-ink: #17140f;
-  --color-ink-2: #433b2d;
-  --color-muted: #6e6757;
-  --color-faint: #938b74;
-  --color-saffron: #c77300;
-  --color-gold: #f5b301;
-  --color-gold-soft: #fbe7a2;
-  --color-line: rgba(25, 21, 16, 0.14);
-  --color-line-soft: rgba(25, 21, 16, 0.07);
-  --color-cream: #e9e1d0;
+  --color-canvas: #F5F5F5;
+  --color-canvas-tint: #EEEEF2;
+  --color-canvas-deep: #0B111B;
+  --color-card: #EEEEF2;
+  --color-ink: #171717;
+  --color-ink-2: #666666;
+  --color-muted: #666666;
+  --color-caption: #585866;
+  --color-faint: #585866;
+  --color-accent: #131DA6;
+  --color-accent-soft: #E3E5FF;
+  --color-on-dark: #E0E2EB;
+  --color-on-accent: #E3E5FF;
+  --color-line: #D9D9DF;
+  --color-line-soft: #D9D9DF;
+  --color-contour-dark: #1C2433;
+  --color-contour-light: #E4E4EA;
 
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -43,20 +43,20 @@ html {
 
 body {
   background: var(--color-canvas);
-  color: var(--color-ink);
+  color: var(--color-ink-2);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--color-gold-soft);
+  background: var(--color-accent-soft);
   color: var(--color-ink);
 }
 
 /* Visible focus for keyboard users, quiet for pointer users */
 :focus-visible {
-  outline: 2px solid var(--color-saffron);
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -81,4 +81,9 @@ details.faq-item > summary .faq-icon {
 }
 details.faq-item[open] > summary .faq-icon {
   transform: rotate(45deg);
+}
+
+/* Headings retain their own foreground on light surfaces. */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-ink);
 }

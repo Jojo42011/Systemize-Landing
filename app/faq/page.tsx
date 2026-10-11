@@ -37,7 +37,7 @@ export default function FaqPage() {
           aria-labelledby="faq-hero-heading"
           className="mx-auto w-full max-w-4xl px-5 pt-16 text-center sm:px-8 sm:pt-24"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.16em] text-saffron">
+          <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
             Before your next call
           </p>
           <h1
@@ -45,7 +45,7 @@ export default function FaqPage() {
             className="font-display mx-auto mt-4 max-w-3xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14]"
           >
             More of the Leads You Already Generate, Turned Into{" "}
-            <span className="text-saffron">Booked Conversations</span>
+            <span className="text-accent">Booked Conversations</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
             Watch this before your next call. It covers what Aethon actually
@@ -87,9 +87,9 @@ export default function FaqPage() {
               {secondCallPrep.map((item, i) => (
                 <li
                   key={item}
-                  className="flex items-start gap-4 rounded-xl border border-line bg-white px-5 py-4 text-base leading-relaxed text-ink-2"
+                  className="flex items-start gap-4 rounded-xl border border-line bg-card px-5 py-4 text-base leading-relaxed text-ink-2"
                 >
-                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold text-sm font-bold text-ink">
+                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line bg-card text-sm font-bold text-caption">
                     {i + 1}
                   </span>
                   {item}

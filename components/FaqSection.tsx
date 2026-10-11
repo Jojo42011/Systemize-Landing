@@ -72,7 +72,7 @@ export default function FaqSection() {
       aria-labelledby="faq-heading"
       className="mx-auto w-full max-w-3xl px-5 py-16 sm:px-8 sm:py-24"
     >
-      <p className="text-center text-sm font-bold uppercase tracking-[0.16em] text-saffron">
+      <p className="text-center text-sm font-bold uppercase tracking-[0.16em] text-accent">
         Questions, answered
       </p>
       <h2
@@ -82,7 +82,7 @@ export default function FaqSection() {
         What operators usually want to know
       </h2>
 
-      <div className="mt-12 divide-y divide-line-soft rounded-2xl border border-line bg-white">
+      <div className="mt-12 divide-y divide-line-soft rounded-2xl border border-line bg-card">
         {faqs.map((faq) => (
           <details key={faq.question} className="faq-item group px-6 sm:px-8">
             <summary className="flex items-center justify-between gap-4 py-5 text-left text-lg font-semibold">

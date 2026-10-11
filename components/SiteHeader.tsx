@@ -22,7 +22,7 @@ export default function SiteHeader() {
             height={34}
             priority
           />
-          <span className="font-display text-lg leading-none tracking-tight sm:text-xl">
+          <span className="font-display text-ink text-lg leading-none tracking-tight sm:text-xl">
             Aethon Intelligence
           </span>
         </a>

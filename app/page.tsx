@@ -20,7 +20,7 @@ export default function Home() {
           >
             We Install a Custom AI Lead Response System That Turns the Leads
             You Already Pay For Into{" "}
-            <span className="text-saffron">Booked Conversations</span>
+            <span className="text-accent">Booked Conversations</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="mt-10">
             <a
               href={bookingHref}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold px-6 py-3.5 text-[15px] font-bold text-ink shadow-[0_6px_24px_-6px_rgba(199,115,0,0.45)] transition-colors duration-200 hover:bg-[#e6a800] sm:px-11 sm:py-4 sm:text-lg"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-6 py-3.5 text-[15px] font-bold text-on-accent shadow-[0_6px_24px_-6px_rgba(19,29,166,0.35)] transition-colors duration-200 hover:bg-canvas-deep hover:text-on-dark sm:px-11 sm:py-4 sm:text-lg"
             >
               Book Your Free Walkthrough Call
               <svg
