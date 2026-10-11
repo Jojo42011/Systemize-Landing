@@ -1,4 +1,3 @@
-import SiteFooter from "@/components/SiteFooter";
 import VslPlayer from "@/components/VslPlayer";
 import { bookingHref, vsl } from "@/lib/config";
 
@@ -60,7 +59,29 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <section
+        aria-labelledby="clinic-stories-heading"
+        className="border-t border-line bg-canvas px-5 py-16 sm:px-8 sm:py-20"
+      >
+        <div className="mx-auto w-full max-w-5xl">
+          <h2
+            id="clinic-stories-heading"
+            className="font-display text-center text-2xl sm:text-3xl"
+          >
+            Hear from other Clinics
+          </h2>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((number) => (
+              <div
+                key={number}
+                role="img"
+                aria-label={"Clinic video placeholder " + number}
+                className="aspect-[9/16] rounded-2xl border-2 border-line bg-transparent"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

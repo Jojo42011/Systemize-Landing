@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import type { VslConfig } from "@/lib/config";
 
@@ -71,13 +70,6 @@ function VslPoster({
 }) {
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-[radial-gradient(ellipse_at_center,#1C2433_0%,#0B111B_70%)] px-6 text-center">
-      <Image
-        src="/aethon-logo.svg"
-        alt=""
-        width={56}
-        height={56}
-        className="opacity-90"
-      />
       <div
         aria-hidden="true"
         className="flex h-16 w-16 items-center justify-center rounded-full border border-accent bg-accent"
