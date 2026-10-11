@@ -14,20 +14,19 @@ export default function Home() {
           aria-labelledby="hero-heading"
           className="mx-auto w-full max-w-4xl flex-1 px-5 pb-24 pt-16 text-center sm:px-8 sm:pt-24"
         >
+          <p className="mb-5 text-sm font-bold uppercase tracking-[0.12em] text-caption sm:text-base">
+            Stop Forcing Bad Marketing.
+          </p>
           <h1
             id="hero-heading"
-            className="font-display mx-auto max-w-3xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14] lg:text-5xl"
+            className="font-display mx-auto max-w-4xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14] lg:text-5xl"
           >
-            Stop Forcing <span className="text-accent">Bad Marketing.</span>
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
             We will install a{" "}
             <strong className="font-bold text-accent">social media growth system</strong>{" "}
             that will get you{" "}
             <strong className="font-bold text-accent">20–30 booked appointments in 30 days</strong>{" "}
             so you never have to worry where the next appointment will come from.
-          </p>
+          </h1>
 
           <div className="mx-auto mt-10 max-w-3xl">
             <VslPlayer
