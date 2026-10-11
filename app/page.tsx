@@ -16,11 +16,11 @@ export default function Home() {
         >
           <h1
             id="hero-heading"
-            className="font-display mx-auto max-w-4xl text-[2rem] leading-[1.15] sm:text-[2.75rem] sm:leading-[1.14] lg:text-5xl"
+            className="font-display mx-auto max-w-4xl text-2xl leading-[1.3] sm:text-3xl sm:leading-[1.3] lg:text-4xl"
           >
             <span className="text-accent">Filler and Botox Clinics:</span>{" "}
             Stop paying for bad advertising by agencies who don&apos;t understand your industry.
-            <span className="mt-6 block">
+            <span className="mt-8 block text-xl leading-relaxed sm:text-2xl sm:leading-relaxed lg:text-3xl lg:leading-[1.4]">
               We will install a{" "}
               <strong className="font-bold text-accent">custom social media growth system</strong>{" "}
               that will get you{" "}
