@@ -17,14 +17,12 @@ export default function Home() {
             id="hero-heading"
             className="font-display mx-auto max-w-4xl text-2xl leading-[1.3] sm:text-3xl sm:leading-[1.3] lg:text-4xl"
           >
-            <span className="text-accent">Filler &amp; Botox Clinics:</span>{" "}
-            Get 20–30 Qualified Appointments in the Next 30 Days or you don&apos;t pay.
+            <span className="text-accent">Botox &amp; Filler Clinics:</span>{" "}
+            Stop Wasting Money on Ads That Don&apos;t Fill Your Calendar.
             <span className="mt-8 block text-xl leading-relaxed sm:text-2xl sm:leading-relaxed lg:text-3xl lg:leading-[1.4]">
               We install a{" "}
-              <strong className="font-bold text-accent">custom patient acquisition system</strong>{" "}
-              that turns local demand into booked consultations, without relying on
-              referrals, inconsistent social media posting, or agencies that don&apos;t
-              understand aesthetics.
+              <strong className="font-bold text-accent">custom Facebook &amp; Instagram advertising system</strong>{" "}
+              designed to generate 20–30 booked appointments in 30 days or you don&apos;t pay.
             </span>
           </h1>
 
