@@ -17,13 +17,14 @@ export default function Home() {
             id="hero-heading"
             className="font-display mx-auto max-w-4xl text-2xl leading-[1.3] sm:text-3xl sm:leading-[1.3] lg:text-4xl"
           >
-            <span className="text-accent">Filler and Botox Clinics:</span>{" "}
-            Stop paying for bad advertising by agencies who don&apos;t understand your industry.
+            <span className="text-accent">Filler &amp; Botox Clinics:</span>{" "}
+            Get 20–30 Qualified Appointments in the Next 30 Days or you don&apos;t pay.
             <span className="mt-8 block text-xl leading-relaxed sm:text-2xl sm:leading-relaxed lg:text-3xl lg:leading-[1.4]">
-              We will install a{" "}
-              <strong className="font-bold text-accent">custom social media growth system</strong>{" "}
-              that will get you{" "}
-              <strong className="font-bold text-accent">20–30 booked appointments in just 30 days.</strong>
+              We install a{" "}
+              <strong className="font-bold text-accent">custom patient acquisition system</strong>{" "}
+              that turns local demand into booked consultations, without relying on
+              referrals, inconsistent social media posting, or agencies that don&apos;t
+              understand aesthetics.
             </span>
           </h1>
 
