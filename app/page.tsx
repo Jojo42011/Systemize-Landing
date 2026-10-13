@@ -1,3 +1,8 @@
+import Image from "next/image";
+import octoberCampaign from "@/public/campaign-results-october.png";
+import mayCampaign from "@/public/campaign-results-may.webp";
+import julyCampaign from "@/public/campaign-results-july.webp";
+import augustCampaign from "@/public/campaign-results-august.webp";
 import VslPlayer from "@/components/VslPlayer";
 import { bookingHref, vsl } from "@/lib/config";
 
@@ -8,10 +13,10 @@ import { bookingHref, vsl } from "@/lib/config";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-[calc(100vh-1px)] flex-col">
+      <main className="flex flex-col">
         <section
           aria-labelledby="hero-heading"
-          className="mx-auto w-full max-w-4xl flex-1 px-5 pb-24 pt-16 text-center sm:px-8 sm:pt-24"
+          className="mx-auto w-full max-w-4xl flex-1 px-5 pb-12 pt-16 text-center sm:px-8 sm:pt-24"
         >
           <h1
             id="hero-heading"
@@ -26,7 +31,7 @@ export default function Home() {
             </span>
           </h1>
 
-          <div className="mx-auto mt-10 max-w-3xl">
+          <div className="mx-auto mt-10 max-w-xl">
             <VslPlayer
               video={vsl.main}
               posterTitle="How the system works"
@@ -60,24 +65,66 @@ export default function Home() {
       </main>
       <section
         aria-labelledby="clinic-stories-heading"
-        className="border-t border-line bg-canvas px-5 py-16 sm:px-8 sm:py-20"
+        className="border-t border-line bg-canvas px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-12"
       >
         <div className="mx-auto w-full max-w-5xl">
           <h2
             id="clinic-stories-heading"
-            className="font-display text-center text-2xl sm:text-3xl"
+            className="font-display text-center text-3xl sm:text-4xl"
           >
-            Hear from other Clinics
+            Real results. Real campaigns.
           </h2>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((number) => (
-              <div
-                key={number}
-                role="img"
-                aria-label={"Clinic video placeholder " + number}
-                className="aspect-[9/16] rounded-2xl border-2 border-line bg-transparent"
-              />
-            ))}
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 items-start gap-4 lg:grid-cols-4 lg:gap-6">
+            <Image
+              src={octoberCampaign}
+              alt="October campaign results showing 63 booked appointments at $24.85 each."
+              sizes="(max-width: 1023px) 50vw, 238px"
+              className="h-auto w-full rounded-2xl border border-line"
+            />
+            <Image
+              src={mayCampaign}
+              alt="May campaign results showing 72 booked appointments at $29.40 each."
+              sizes="(max-width: 1023px) 50vw, 238px"
+              className="h-auto w-full rounded-2xl border border-line"
+            />
+            <Image
+              src={julyCampaign}
+              alt="July campaign image showing 54 booked appointments at $26.70 each."
+              sizes="(max-width: 1023px) 50vw, 238px"
+              className="h-auto w-full rounded-2xl border border-line"
+            />
+            <Image
+              src={augustCampaign}
+              alt="August campaign image showing 68 booked appointments at $27.95 each."
+              sizes="(max-width: 1023px) 50vw, 238px"
+              className="h-auto w-full rounded-2xl border border-line"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="client-stories-heading"
+        className="border-t border-line bg-canvas px-5 py-16 sm:px-8 sm:py-20"
+      >
+        <div className="mx-auto w-full max-w-5xl">
+          <h2
+            id="client-stories-heading"
+            className="font-display text-center text-3xl sm:text-4xl"
+          >
+            Hear from our clients
+          </h2>
+          <div className="mx-auto mt-10 max-w-sm">
+            <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-line bg-canvas-deep">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Client testimonial video"
+                className="h-full w-full object-contain"
+              >
+                <source src="/client-testimonial-01.mp4#t=0.001" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </section>
