@@ -4,7 +4,8 @@ import mayCampaign from "@/public/campaign-results-may.webp";
 import julyCampaign from "@/public/campaign-results-july.webp";
 import augustCampaign from "@/public/campaign-results-august.webp";
 import VslPlayer from "@/components/VslPlayer";
-import { bookingHref, vsl } from "@/lib/config";
+import { vsl } from "@/lib/config";
+import ProcessQuestionnaire from "@/components/ProcessQuestionnaire";
 
 /**
  * Single-page VSL funnel, mirroring the HIS reference format:
@@ -40,26 +41,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <a
-              href={bookingHref}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-6 py-3.5 text-[15px] font-bold text-on-accent shadow-[0_6px_24px_-6px_rgba(19,29,166,0.35)] transition-colors duration-200 hover:bg-canvas-deep hover:text-on-dark sm:px-11 sm:py-4 sm:text-lg"
-            >
-              Book Your Free Walkthrough Call
-              <svg
-                aria-hidden="true"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.25"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
+            <ProcessQuestionnaire />
           </div>
         </section>
       </main>
@@ -79,25 +61,25 @@ export default function Home() {
               src={octoberCampaign}
               alt="October campaign results showing 63 booked appointments at $24.85 each."
               sizes="(max-width: 1023px) 50vw, 238px"
-              className="h-auto w-full rounded-2xl border border-line"
+              className="aspect-[4/5] w-full rounded-2xl border border-line bg-[#121212] object-contain"
             />
             <Image
               src={mayCampaign}
               alt="May campaign results showing 72 booked appointments at $29.40 each."
               sizes="(max-width: 1023px) 50vw, 238px"
-              className="h-auto w-full rounded-2xl border border-line"
+              className="aspect-[4/5] w-full rounded-2xl border border-line bg-[#121212] object-contain"
             />
             <Image
               src={julyCampaign}
               alt="July campaign image showing 54 booked appointments at $26.70 each."
               sizes="(max-width: 1023px) 50vw, 238px"
-              className="h-auto w-full rounded-2xl border border-line"
+              className="aspect-[4/5] w-full rounded-2xl border border-line bg-[#121212] object-contain"
             />
             <Image
               src={augustCampaign}
               alt="August campaign image showing 68 booked appointments at $27.95 each."
               sizes="(max-width: 1023px) 50vw, 238px"
-              className="h-auto w-full rounded-2xl border border-line"
+              className="aspect-[4/5] w-full rounded-2xl border border-line bg-[#121212] object-contain"
             />
           </div>
         </div>
