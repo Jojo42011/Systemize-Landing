@@ -142,7 +142,7 @@ export default function ProcessQuestionnaire() {
 
   return (
     <>
-      <button type="button" className={`${buttonClass} px-11 text-lg shadow-[0_6px_24px_-6px_rgba(19,29,166,0.35)]`} onClick={() => { setOpen(true); setError(false); }}>
+      <button type="button" className="inline-flex min-h-16 items-center justify-center gap-3 rounded-full bg-accent px-12 py-4 text-xl font-bold text-on-accent shadow-[0_6px_24px_-6px_rgba(19,29,166,0.35)] transition-colors hover:bg-canvas-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:px-14" onClick={() => { setOpen(true); setError(false); }}>
         See the process <span aria-hidden="true">→</span>
       </button>
       <dialog ref={dialog} aria-labelledby="process-title" onCancel={(event) => { if (submitting) event.preventDefault(); else setOpen(false); }} onClose={() => setOpen(false)} className="fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%-2rem)] max-w-xl overflow-y-auto rounded-3xl border border-line bg-canvas p-0 text-left text-ink shadow-2xl backdrop:bg-canvas-deep/65">

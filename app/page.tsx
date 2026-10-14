@@ -6,11 +6,23 @@ import augustCampaign from "@/public/campaign-results-august.webp";
 import VslPlayer from "@/components/VslPlayer";
 import { vsl } from "@/lib/config";
 import ProcessQuestionnaire from "@/components/ProcessQuestionnaire";
+import SiteFooter from "@/components/SiteFooter";
 
-/**
- * Single-page VSL funnel, mirroring the HIS reference format:
- * headline → subheadline → video → one CTA → footer. Nothing else.
- */
+const clinicFaqs = [
+  {
+    question: "Is this designed for Botox and filler clinics?",
+    answer: "Yes. The system focuses on helping Botox and filler clinics turn local interest into booked consultations through Facebook and Instagram advertising. During the walkthrough, we will discuss your clinic, your goals, and whether the approach fits your business.",
+  },
+  {
+    question: "What happens when I click See the process?",
+    answer: "You will answer a few short questions about your clinic and your plans. Once you submit the questionnaire, a calendar opens so you can choose a time for your free walkthrough.",
+  },
+  {
+    question: "What should I prepare for the walkthrough?",
+    answer: "Come ready to discuss the treatments you want to promote, the area you serve, and how many new consultations your team can handle. If you already run ads, bring a rough idea of your current spend and results. We can use that context to discuss the next steps.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -95,7 +107,7 @@ export default function Home() {
           >
             Hear from our clients
           </h2>
-          <div className="mx-auto mt-10 max-w-sm">
+          <div className="mx-auto mt-10 max-w-xs">
             <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-line bg-canvas-deep">
               <video
                 controls
@@ -110,6 +122,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section aria-labelledby="home-faq-heading" className="border-t border-line bg-canvas px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h2 id="home-faq-heading" className="font-display text-center text-3xl sm:text-4xl">Frequently asked questions</h2>
+          <div className="mt-10 divide-y divide-line border-y border-line">
+            {clinicFaqs.map((faq) => (
+              <details key={faq.question} className="group py-1">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 rounded-lg py-5 text-lg font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span aria-hidden="true" className="shrink-0 text-2xl font-normal text-accent transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="max-w-2xl pb-6 pr-7 text-base leading-relaxed text-ink-2">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <SiteFooter />
     </>
   );
 }

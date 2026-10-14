@@ -38,6 +38,7 @@ export const site = {
   url: resolveSiteUrl(),
   mainSite: "https://aethonintelligence.com",
   caseStudies: "https://aethonintelligence.com/case-studies/",
+  privacyEmail: "info@systemizetx.com",
 } as const;
 
 /**
@@ -112,9 +113,7 @@ export const routes = {
   home: "/",
   confirm: "/confirm",
   faq: "/faq",
-  // Legal pages live on the main Aethon site today. Swap these to local
-  // routes ("/privacy", "/terms") once those pages are built here.
-  privacy: "https://aethonintelligence.com/privacy-policy/",
-  terms: "https://aethonintelligence.com/terms/",
+  privacy: "/privacy",
+  terms: "/terms",
   contact: "https://aethonintelligence.com/#contact",
 } as const;
