@@ -6,9 +6,9 @@ import VslPlayer from "@/components/VslPlayer";
 import { vsl } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "How the System Works | Aethon Intelligence",
+  title: "How the System Works | SystemizeTX LLC",
   description:
-    "How Aethon's custom AI lead response system works, the proof behind it, and answers to the questions operators ask most.",
+    "How SystemizeTX LLC's custom AI lead response system works, the proof behind it, and answers to the questions operators ask most.",
 };
 
 const faqSchema = {
@@ -48,7 +48,7 @@ export default function FaqPage() {
             <span className="text-accent">Booked Conversations</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-2 sm:text-xl">
-            Watch this before your next call. It covers what Aethon actually
+            Watch this before your next call. It covers what SystemizeTX LLC actually
             builds, how the system fits around your existing workflow, where
             humans stay involved, and how results are measured.
           </p>

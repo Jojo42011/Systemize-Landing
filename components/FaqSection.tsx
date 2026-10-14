@@ -5,7 +5,7 @@ const faqs: { question: string; answer: string }[] = [
       "No. A chatbot is a widget you bolt onto a website. What we install is a lead response system built into your actual operation: it works from your lead sources, writes into your CRM, follows your qualification rules, and hands conversations to your team at the moments you define. AI handles the conversational work, and the system around it is designed for your business specifically.",
   },
   {
-    question: "Is Aethon a marketing agency?",
+    question: "Is SystemizeTX LLC a marketing agency?",
     answer:
       "No. We do not run ads, produce content, or generate leads. You keep whatever is already creating demand. Our work starts the moment a lead exists: making sure it gets a fast response, consistent follow up, real qualification, and a clear next step instead of going quiet.",
   },
@@ -40,7 +40,7 @@ const faqs: { question: string; answer: string }[] = [
       "The walkthrough is the first step. If it fits, the audit begins from there, and build timelines are scoped to your operation's complexity. We will give you a realistic timeline in writing rather than a universal promise.",
   },
   {
-    question: "What does Aethon need from us?",
+    question: "What does SystemizeTX LLC need from us?",
     answer:
       "Context and access, in that order. Early on: an honest picture of your lead sources, volumes, current response process, and what qualification means to you. During the build: access to the tools involved, such as your CRM, calendars, and phone or messaging channels, plus a point person who can answer questions about how things really work. Implementation is collaborative, and the system is only as good as the workflow it is built around.",
   },

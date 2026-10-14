@@ -5,9 +5,9 @@ import VslPlayer from "@/components/VslPlayer";
 import { routes, vsl } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Your Call Is Scheduled | Aethon Intelligence",
+  title: "Your Call Is Scheduled | SystemizeTX LLC",
   description:
-    "Your walkthrough call with Aethon Intelligence is booked. Watch the short preparation video and confirm your calendar invitation.",
+    "Your walkthrough call with SystemizeTX LLC is booked. Watch the short preparation video and confirm your calendar invitation.",
   // Post-booking page. Not meant to be found via search.
   robots: { index: false, follow: false },
 };
@@ -243,7 +243,7 @@ function EmailVisual() {
               Booking confirmed: Walkthrough Call
             </p>
             <p className="truncate text-xs text-caption">
-              Aethon Intelligence · just now
+              SystemizeTX LLC · just now
             </p>
           </div>
           <span className="ml-auto h-2 w-2 shrink-0 rounded-full bg-accent" />
@@ -280,7 +280,7 @@ function InviteVisual() {
               Your selected time · 30 min
             </p>
             <p className="truncate text-xs text-caption">
-              You + Aethon Intelligence
+              You + SystemizeTX LLC
             </p>
           </div>
         </div>

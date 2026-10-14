@@ -1,4 +1,4 @@
-# Aethon Intelligence — VSL Funnel
+# SystemizeTX LLC Landing Funnel
 
 The landing funnel for Botox and filler clinics, with a questionnaire, CRM lead capture, and embedded consultation booking.
 
@@ -33,7 +33,7 @@ All integrations are environment-driven and documented in [`.env.example`](.env.
 | `NEXT_PUBLIC_VIDALYTICS_EMBED_ID` + `..._LOADER_URL` | Main page VSL | Branded 16:9 poster, no layout shift |
 | `NEXT_PUBLIC_VIDALYTICS_EMBED_ID_CONFIRM` + `..._LOADER_URL_CONFIRM` | `/confirm` preparation video | Branded poster |
 | `NEXT_PUBLIC_VIDALYTICS_EMBED_ID_FAQ` + `..._LOADER_URL_FAQ` | `/faq` pre-call video | Branded poster |
-| `NEXT_PUBLIC_CAL_LINK` | Cal.com booking link (main-page CTA target) | CTA falls back to the Aethon contact page |
+| `NEXT_PUBLIC_CAL_LINK` | Cal.com booking link (main-page CTA target) | CTA falls back to the SystemizeTX LLC contact page |
 | `NEXT_PUBLIC_CAL_REDIRECT_URL` | Post-booking redirect override | Defaults to `/confirm`; also set "Redirect on booking" in Cal.com event settings |
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL for metadata | Falls back to default (empty/malformed values are tolerated) |
 
@@ -78,4 +78,4 @@ Before using the events for campaign optimization, check an authorized real subm
 
 ## Content rules
 
-Claims on this page are limited to evidence documented on aethonintelligence.com (Lead Smart and Aquatic Pools case studies, labeled with their real industries). Draft claims from campaign planning (conversion percentages, guaranteed appointment counts, "we already built your blueprint") are **not** published here and must not be added until their definitions and evidence are finalized.
+Use the approved clinic campaign images and testimonial for this site. New performance claims require supporting evidence. Keep the terms of any appointment or payment offer documented and consistent with the published copy.

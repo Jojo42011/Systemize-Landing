@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { routes, site } from "@/lib/config";
 import CtaButton from "./CtaButton";
 
@@ -15,15 +14,8 @@ export default function SiteHeader() {
           className="flex items-center gap-2.5"
           aria-label={`${site.name} home`}
         >
-          <Image
-            src="/aethon-logo.svg"
-            alt=""
-            width={34}
-            height={34}
-            priority
-          />
           <span className="font-display text-ink text-lg leading-none tracking-tight sm:text-xl">
-            Aethon Intelligence
+            SystemizeTX LLC
           </span>
         </a>
         <CtaButton size="md">

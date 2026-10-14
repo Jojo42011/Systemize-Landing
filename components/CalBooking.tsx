@@ -25,7 +25,7 @@ declare global {
  * is set (planned: /confirm).
  *
  * When unconfigured, a deliberate fallback renders so the booking action never
- * silently fails: a styled card linking to the main Aethon contact page, plus
+ * silently fails: a styled card linking to the main SystemizeTX LLC contact page, plus
  * a development-only notice for whoever is wiring the page up.
  */
 export default function CalBooking() {
@@ -123,7 +123,7 @@ function BookingFallback({ failed }: { failed: boolean }) {
         href={booking.fallbackHref}
         className="inline-flex items-center justify-center rounded-full bg-canvas-deep px-7 py-3 text-sm font-semibold text-on-dark transition-colors hover:bg-accent hover:text-on-accent"
       >
-        Contact Aethon Intelligence
+        Contact SystemizeTX LLC
       </a>
       {process.env.NODE_ENV === "development" && !failed && (
         <p className="mt-2 rounded-lg bg-canvas-tint px-4 py-2 text-xs text-faint">

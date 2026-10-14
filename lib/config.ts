@@ -5,7 +5,7 @@
  * works cleanly when they are absent. See `.env.example` for documentation.
  */
 
-const DEFAULT_SITE_URL = "https://funnel.aethonintelligence.com";
+const DEFAULT_SITE_URL = "https://systemizelanding.vercel.app";
 
 /**
  * Resolve the canonical site URL defensively: an unset, empty, or malformed
@@ -31,13 +31,13 @@ function resolveSiteUrl(): string {
 }
 
 export const site = {
-  name: "Aethon Intelligence",
-  legalName: "Aethon Intelligence LLC",
+  name: "SystemizeTX LLC",
+  legalName: "SystemizeTX LLC",
   founder: "Jahan Patel",
   location: "San Antonio, Texas",
   url: resolveSiteUrl(),
-  mainSite: "https://aethonintelligence.com",
-  caseStudies: "https://aethonintelligence.com/case-studies/",
+  mainSite: "https://systemizelanding.vercel.app",
+  caseStudies: "https://systemizelanding.vercel.app/#clinic-stories-heading",
   privacyEmail: "info@systemizetx.com",
 } as const;
 
@@ -79,7 +79,7 @@ export const vsl = {
  *
  * Set NEXT_PUBLIC_CAL_LINK to the Cal.com link slug, e.g. "jahan/walkthrough"
  * (the part after cal.com/). When unset, booking CTAs fall back to the
- * contact section of the main Aethon site so the button never dead-ends.
+ * contact section of the main SystemizeTX LLC site so the button never dead-ends.
  *
  * NEXT_PUBLIC_CAL_REDIRECT_URL overrides the post-booking redirect, which
  * defaults to /confirm. Because the main-page CTA links to the Cal.com
@@ -91,14 +91,14 @@ export const booking = {
   calLink: (process.env.NEXT_PUBLIC_CAL_LINK ?? "").trim(),
   redirectUrl:
     (process.env.NEXT_PUBLIC_CAL_REDIRECT_URL ?? "").trim() || "/confirm",
-  fallbackHref: "https://aethonintelligence.com/#contact",
+  fallbackHref: "mailto:info@systemizetx.com",
 } as const;
 
 export const isBookingConfigured = booking.calLink.length > 0;
 
 /**
  * Where the primary CTA sends the visitor: the Cal.com booking page when
- * configured, otherwise the contact section of the main Aethon site so the
+ * configured, otherwise the contact section of the main SystemizeTX LLC site so the
  * button never dead-ends.
  */
 export const bookingHref = isBookingConfigured
@@ -115,5 +115,5 @@ export const routes = {
   faq: "/faq",
   privacy: "/privacy",
   terms: "/terms",
-  contact: "https://aethonintelligence.com/#contact",
+  contact: "mailto:info@systemizetx.com",
 } as const;
