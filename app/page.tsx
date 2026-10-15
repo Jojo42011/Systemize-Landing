@@ -3,8 +3,6 @@ import octoberCampaign from "@/public/campaign-results-october.png";
 import mayCampaign from "@/public/campaign-results-may.webp";
 import julyCampaign from "@/public/campaign-results-july.webp";
 import augustCampaign from "@/public/campaign-results-august.webp";
-import VslPlayer from "@/components/VslPlayer";
-import { vsl } from "@/lib/config";
 import ProcessQuestionnaire from "@/components/ProcessQuestionnaire";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -44,11 +42,13 @@ export default function Home() {
             </span>
           </h1>
 
-          <div className="mx-auto mt-10 max-w-xl">
-            <VslPlayer
-              video={vsl.main}
-              posterTitle="How the system works"
-              posterText="A short walkthrough of what we install, how it fits your operation, and what a good fit looks like."
+          <div className="mx-auto mt-10 max-w-xl overflow-hidden rounded-2xl border border-contour-dark bg-canvas-deep shadow-[0_24px_60px_-24px_rgba(11,17,27,0.4)]">
+            <iframe
+              src="https://www.loom.com/embed/648a664ba6de4203aae438180105a1b4"
+              title="How the SystemizeTX clinic growth system works"
+              className="aspect-video w-full border-0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
             />
           </div>
 
