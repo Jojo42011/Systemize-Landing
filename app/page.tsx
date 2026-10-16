@@ -34,11 +34,11 @@ export default function Home() {
             className="font-display mx-auto max-w-4xl text-2xl leading-[1.3] sm:text-3xl sm:leading-[1.3] lg:text-4xl"
           >
             <span className="text-accent">Botox &amp; Filler Clinics:</span>{" "}
-            Stop Wasting Money on Ads That Don&apos;t Fill Your Calendar.
+            Stop Paying for Ads That Don&apos;t Fill Your Calendar.
             <span className="mt-8 block text-xl leading-relaxed sm:text-2xl sm:leading-relaxed lg:text-3xl lg:leading-[1.4]">
               We install a{" "}
-              <strong className="font-bold text-accent">custom social media growth system</strong>{" "}
-              designed to generate 20–50 booked appointments <span className="text-accent">WHO SHOW UP</span> in 30 days or you don&apos;t pay.
+              <strong className="font-bold text-accent">custom patient acquisition system</strong>{" "}
+              designed to bring you <strong className="font-bold">20–50 appointments that actually <span className="text-accent">SHOW UP</span> at your clinic in 30 days or you don&apos;t pay.</strong>
             </span>
           </h1>
 
