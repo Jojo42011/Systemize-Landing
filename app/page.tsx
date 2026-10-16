@@ -37,8 +37,8 @@ export default function Home() {
             Stop Wasting Money on Ads That Don&apos;t Fill Your Calendar.
             <span className="mt-8 block text-xl leading-relaxed sm:text-2xl sm:leading-relaxed lg:text-3xl lg:leading-[1.4]">
               We install a{" "}
-              <strong className="font-bold text-accent">custom Facebook &amp; Instagram advertising system</strong>{" "}
-              designed to generate 20–50 booked appointments in 30 days or you don&apos;t pay.
+              <strong className="font-bold text-accent">custom social media growth system</strong>{" "}
+              designed to generate 20–50 booked appointments WHO SHOW UP in 30 days or you don&apos;t pay.
             </span>
           </h1>
 
