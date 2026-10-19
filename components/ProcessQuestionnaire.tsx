@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { rememberLeadId, trackConfirmedBooking, trackConversion } from "@/lib/meta-events";
-import { buildLeadPayload, captureAttribution, submitLead, type QuestionnaireAnswers } from "@/lib/lead-submission";
+import { buildLeadPayload, captureAttribution, SMS_CONSENT_TEXT, submitLead, type QuestionnaireAnswers } from "@/lib/lead-submission";
 
 const CAL_LINK = "info-systemize-agqycu/30min";
 const CAL_NAMESPACE = "30min";
@@ -78,7 +78,7 @@ function loadCalendar(): Promise<EmbedApi> {
 }
 
 const blankAnswers: QuestionnaireAnswers = {
-  companyName: "", annualRevenue: "", decisionMaker: "", startTimeline: "", name: "", email: "", phone: "", note: "",
+  companyName: "", annualRevenue: "", decisionMaker: "", startTimeline: "", name: "", email: "", phone: "", smsConsent: true, note: "",
 };
 const steps = ["Your clinic", "Your plans", "Your details"];
 const fieldClass = "mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-ink outline-offset-4 focus:border-accent";
@@ -204,6 +204,10 @@ export default function ProcessQuestionnaire() {
                 <label className="block text-sm font-semibold" htmlFor="contact-note">Anything you’d like us to know? <span className="font-normal text-muted">(optional)</span><textarea id="contact-note" rows={3} maxLength={2000} value={answers.note} onChange={(e) => update("note", e.target.value)} className={`${fieldClass} resize-y`} /></label>
               </>}
             </fieldset>
+            {step === 2 && <label className="mt-5 flex cursor-pointer items-start gap-3 text-xs leading-relaxed text-caption" htmlFor="sms-consent">
+              <input id="sms-consent" name="sms_consent" type="checkbox" checked={answers.smsConsent} disabled={submitting} onChange={(event) => setAnswers((current) => ({ ...current, smsConsent: event.target.checked }))} className="mt-0.5 h-4 w-4 shrink-0 accent-accent" />
+              <span>{SMS_CONSENT_TEXT}</span>
+            </label>}
             {step === 2 && <p className="mt-4 text-xs leading-relaxed text-caption">By submitting, you ask Systemize TX to contact you by email about your inquiry. Your answers are saved in our CRM and your name and email are used to prefill the calendar. See our <a href="/privacy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Privacy Policy</a>.</p>}
             {error && <p role="alert" className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">{error === "calendar"
               ? "Your answers are saved, but the calendar could not load. Please try again to open it."

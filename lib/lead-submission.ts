@@ -6,8 +6,11 @@ export type QuestionnaireAnswers = {
   name: string;
   email: string;
   phone: string;
+  smsConsent: boolean;
   note: string;
 };
+
+export const SMS_CONSENT_TEXT = "I agree to receive text messages from SystemizeTX LLC about my inquiry and appointment at the number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. This choice is optional and is not a condition of purchase or booking.";
 
 export type Attribution = Partial<Record<"utm_source" | "utm_medium" | "utm_campaign" | "utm_content" | "utm_term" | "fbclid" | "fbp" | "fbc" | "page_url", string>>;
 
@@ -59,6 +62,8 @@ export function buildLeadPayload(answers: QuestionnaireAnswers, eventId: string,
     name: answers.name.trim(),
     email: answers.email.trim(),
     phone: answers.phone.trim(),
+    consent: answers.smsConsent,
+    consent_text: SMS_CONSENT_TEXT,
     business: answers.companyName.trim(),
     revenue: answers.annualRevenue,
     problem: [
