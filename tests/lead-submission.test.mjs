@@ -5,13 +5,14 @@ import { buildLeadPayload, captureAttribution, submitLead } from "../lib/lead-su
 const answers = {
   companyName: " Example Clinic ", annualRevenue: "Under $100,000",
   decisionMaker: "Yes, I make the final decision", startTimeline: "Within 30 days",
-  name: " Test Visitor ", email: " test@example.com ", note: " A business inquiry ",
+  name: " Test Visitor ", email: " test@example.com ", phone: " (210) 555-0100 ", note: " A business inquiry ",
 };
 
-test("maps existing answers without inventing phone details or consent", () => {
+test("maps contact details and answers without inventing consent", () => {
   const payload = buildLeadPayload(answers, "event123", { utm_source: "meta", fbp: "fb.1.123.456" });
   assert.equal(payload.name, "Test Visitor");
   assert.equal(payload.email, "test@example.com");
+  assert.equal(payload.phone, "(210) 555-0100");
   assert.equal(payload.business, "Example Clinic");
   assert.equal(payload.revenue, answers.annualRevenue);
   assert.match(payload.problem, /Decision maker: Yes, I make the final decision/);
@@ -19,7 +20,7 @@ test("maps existing answers without inventing phone details or consent", () => {
   assert.match(payload.problem, /Additional information: A business inquiry/);
   assert.equal(payload.event_id, "event123");
   assert.equal(payload.company_site, "");
-  for (const field of ["phone", "city", "state", "consent", "consent_text"]) assert.equal(field in payload, false);
+  for (const field of ["city", "state", "consent", "consent_text"]) assert.equal(field in payload, false);
 });
 
 test("retains ad attribution, removes unrelated URL parameters, and never invents a click", () => {

@@ -78,7 +78,7 @@ function loadCalendar(): Promise<EmbedApi> {
 }
 
 const blankAnswers: QuestionnaireAnswers = {
-  companyName: "", annualRevenue: "", decisionMaker: "", startTimeline: "", name: "", email: "", note: "",
+  companyName: "", annualRevenue: "", decisionMaker: "", startTimeline: "", name: "", email: "", phone: "", note: "",
 };
 const steps = ["Your clinic", "Your plans", "Your details"];
 const fieldClass = "mt-2 w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-ink outline-offset-4 focus:border-accent";
@@ -200,6 +200,7 @@ export default function ProcessQuestionnaire() {
               {step === 2 && <>
                 <label className="block text-sm font-semibold" htmlFor="contact-name">Full name<input id="contact-name" required autoComplete="name" maxLength={160} pattern=".*\S.*" value={answers.name} onChange={(e) => update("name", e.target.value)} className={fieldClass} /></label>
                 <label className="block text-sm font-semibold" htmlFor="contact-email">Email address<input id="contact-email" required type="email" autoComplete="email" maxLength={254} value={answers.email} onChange={(e) => update("email", e.target.value)} className={fieldClass} /></label>
+                <label className="block text-sm font-semibold" htmlFor="contact-phone">Phone number<input id="contact-phone" required type="tel" autoComplete="tel" inputMode="tel" minLength={7} maxLength={30} title="Enter your phone number, including the country code if outside the United States." value={answers.phone} onChange={(e) => update("phone", e.target.value)} className={fieldClass} /></label>
                 <label className="block text-sm font-semibold" htmlFor="contact-note">Anything you’d like us to know? <span className="font-normal text-muted">(optional)</span><textarea id="contact-note" rows={3} maxLength={2000} value={answers.note} onChange={(e) => update("note", e.target.value)} className={`${fieldClass} resize-y`} /></label>
               </>}
             </fieldset>

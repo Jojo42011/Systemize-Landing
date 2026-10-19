@@ -45,7 +45,7 @@ Main page → questionnaire → confirmed CRM save → embedded Cal.com booking.
 
 The main questionnaire posts JSON directly to `https://systemizetx-crm.fly.dev/api/leads` using the public form key in the `x-stx-key` header. This key permits public form submissions and is intentionally browser visible. Never replace it with an administrative credential.
 
-Existing form answers map to `name`, `email`, `business`, and `revenue`. Decision maker status, preferred start time, and the optional note are preserved together in `problem`. The form sends an empty `company_site` bot trap. It does not send phone, city, state, or invented consent values.
+Existing form answers map to `name`, `email`, `phone`, `business`, and `revenue`. Decision maker status, preferred start time, and the optional note are preserved together in `problem`. The form sends an empty `company_site` bot trap. It does not send city, state, or invented consent values.
 
 Ad URL parameters supply the UTM fields and `fbclid`. Meta cookies supply `fbp` and `fbc`; a missing `fbc` can be derived only from an actual captured click ID. Attribution stays in session storage. Only the recognized campaign parameters are retained in `page_url`.
 

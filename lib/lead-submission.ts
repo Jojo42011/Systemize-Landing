@@ -5,6 +5,7 @@ export type QuestionnaireAnswers = {
   startTimeline: string;
   name: string;
   email: string;
+  phone: string;
   note: string;
 };
 
@@ -57,6 +58,7 @@ export function buildLeadPayload(answers: QuestionnaireAnswers, eventId: string,
     ...attribution,
     name: answers.name.trim(),
     email: answers.email.trim(),
+    phone: answers.phone.trim(),
     business: answers.companyName.trim(),
     revenue: answers.annualRevenue,
     problem: [
